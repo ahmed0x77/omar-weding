@@ -57,6 +57,11 @@ button, a { -webkit-tap-highlight-color: transparent; }
    left before scaling and clips the inputs. Keep scrolling available for small screens. */
 .tally-form { position: absolute; top: 0; left: 0; right: auto; display: block; width: 138.888889%; height: 138.888889%; max-width: none; margin: 0; border: 0; background: transparent; color-scheme: dark; transform: scale(.72); transform-origin: top left; }
 
+@media (max-width: 700px) {
+  .tally-shell { top: 14%; width: 92%; height: 72%; border-radius: 16px; }
+  .tally-form { width: 117.647059%; height: 117.647059%; transform: scale(.85); }
+}
+
 .footer { bottom: 1.8%; }
 .footer p { display: inline-block; margin: 0 0 2.3%; padding: .5% 3%; border: 1px solid rgba(230, 186, 123, .72); border-radius: 4px; font-family: Georgia, "Times New Roman", serif; font-size: clamp(10px, 2.6vw, 36px); letter-spacing: .04em; }
 .footer nav { direction: ltr; display: flex; justify-content: center; gap: 7%; }
