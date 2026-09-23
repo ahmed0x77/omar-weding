@@ -22,11 +22,12 @@ button, a { -webkit-tap-highlight-color: transparent; }
 @keyframes invite-pulse { 0%, 100% { transform: scale(.965); } 50% { transform: scale(1.025); } }
 
 .hero-copy, .countdown-block, .venue-copy, .footer { position: absolute; left: 50%; width: 88%; transform: translateX(-50%); text-align: center; text-shadow: 0 2px 8px rgba(0, 0, 0, .78); }
-.hero-copy { top: 27.5%; }
-.event-title { margin: 0 0 8.5%; font-family: "Wedding Arabic", "Wedding Text", serif; font-size: clamp(35px, 9.5vw, 130px); line-height: 1; }
-.couple { display: flex; align-items: center; justify-content: center; gap: 7%; margin-bottom: 7%; font-family: "Wedding Arabic", "Wedding Text", serif; font-size: clamp(38px, 10.5vw, 144px); line-height: 1.2; }
+.hero-copy { top: 35%; }
+.event-title { display: flex; align-items: center; justify-content: center; margin: 0 0 8.5%; line-height: 1; }
+.event-title img { display: block; width: 54%; height: auto; }
+.couple { display: flex; align-items: center; justify-content: center; gap: 7%; margin-bottom: 7%; font-family: "Wedding Latin", "Wedding Arabic", serif; font-size: clamp(38px, 10.5vw, 144px); line-height: 1.2; }
 .couple b { font-family: Georgia, serif; font-size: .76em; font-weight: 400; }
-.date { margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: clamp(21px, 5.4vw, 74px); letter-spacing: .13em; }
+.date { direction: ltr; margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: clamp(21px, 5.4vw, 74px); letter-spacing: .13em; }
 .time { margin: 2% 0 0; font-size: clamp(16px, 4.2vw, 57px); }
 
 .countdown-block { top: 9.2%; }
@@ -51,14 +52,11 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .location-button { top: 83.7%; gap: 6%; min-width: 30%; padding: 1.8% 4%; font-size: clamp(14px, 3.7vw, 50px); }
 .location-button svg { width: 1em; fill: currentColor; }
 .rsvp-button { top: 4.3%; min-width: 28%; margin: 0; padding: 2.6% 5%; background: #a78043; font-size: clamp(17px, 4.2vw, 58px); }
-.tally-form { position: absolute; top: 17.7%; left: 50%; width: 59%; height: 68%; transform: translateX(-50%); border: 0; border-radius: 22px; background: transparent; color-scheme: dark; overflow: hidden; }
+.tally-form { position: absolute; top: 17.7%; left: 50%; width: 59%; height: 56%; transform: translateX(-50%); border: 0; border-radius: 22px; background: transparent; color-scheme: dark; overflow: hidden; }
 
 .footer { bottom: 1.8%; }
 .footer p { display: inline-block; margin: 0 0 2.3%; padding: .5% 3%; border: 1px solid rgba(230, 186, 123, .72); border-radius: 4px; font-family: Georgia, "Times New Roman", serif; font-size: clamp(10px, 2.6vw, 36px); letter-spacing: .04em; }
 .footer nav { direction: ltr; display: flex; justify-content: center; gap: 7%; }
 .footer nav a { display: grid; place-items: center; width: clamp(24px, 6vw, 82px); aspect-ratio: 1; color: var(--gold); border: 1px solid rgba(230, 186, 123, .45); border-radius: 50%; text-decoration: none; font-family: Arial, sans-serif; font-size: clamp(12px, 3.2vw, 44px); }
-
-.music-toggle { position: fixed; z-index: 60; right: max(15px, env(safe-area-inset-right)); bottom: max(15px, env(safe-area-inset-bottom)); width: 45px; height: 45px; padding: 0; color: var(--gold-light); background: rgba(2, 11, 26, .82); border: 1px solid rgba(230, 186, 123, .72); border-radius: 50%; box-shadow: 0 4px 18px rgba(0, 0, 0, .5); font-size: 22px; cursor: pointer; backdrop-filter: blur(8px); }
-.music-toggle.is-muted { opacity: .58; }
 
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .invitation-cover img { animation: none; } }
