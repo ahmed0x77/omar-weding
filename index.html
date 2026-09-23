@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#020b1a">
+  <meta name="description" content="يسعدنا مشاركتكم فرحة عمر وريهام، ننتظر حضوركم الكريم.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ar_EG">
+  <meta property="og:title" content="حفل زفاف عمر &amp; ريهام">
+  <meta property="og:description" content="يسعدنا مشاركتكم فرحة عمر وريهام، ننتظر حضوركم الكريم.">
+  <meta property="og:image" content="assets/images/envelope-closed.png">
+  <meta property="og:image:alt" content="دعوة حفل زفاف عمر وريهام">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="حفل زفاف عمر &amp; ريهام">
+  <meta name="twitter:description" content="يسعدنا مشاركتكم فرحة عمر وريهام، ننتظر حضوركم الكريم.">
+  <meta name="twitter:image" content="assets/images/envelope-closed.png">
+  <title>حفل زفاف عمر وريهام</title>
+  <link rel="preload" href="assets/images/envelope-closed.png" as="image">
+  <link rel="preload" href="assets/images/hero.jpg" as="image">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="locked">
+  <button id="invitationCover" class="invitation-cover" type="button" aria-label="اضغط لفتح الدعوة وتشغيل الموسيقى">
+    <img src="assets/images/envelope-closed.png" alt="اضغط لفتح الدعوة">
+  </button>
+
+  <main id="invitation" class="invitation" aria-hidden="true">
+    <section class="panel panel--hero" aria-label="دعوة الزفاف">
+      <div class="hero-copy">
+        <p class="event-title">عقد قران</p>
+        <div class="couple" aria-label="عمر وريهام">
+          <span>عمر</span><b>&amp;</b><span>ريهام</span>
+        </div>
+        <p class="date">٦ / ١٠ / ٢٠٢٦</p>
+        <p class="time">الساعة ٦ مساءً</p>
+      </div>
+    </section>
+
+    <section class="panel panel--details" aria-label="تفاصيل الحفل">
+      <div class="countdown-block">
+        <p>متبقي على فرحتنا</p>
+        <div id="countdown" class="countdown" aria-live="polite">
+          <span><strong id="days">00</strong><small>يوم</small></span><i>:</i>
+          <span><strong id="hours">00</strong><small>ساعة</small></span><i>:</i>
+          <span><strong id="minutes">00</strong><small>دقيقة</small></span><i>:</i>
+          <span><strong id="seconds">00</strong><small>ثانية</small></span>
+        </div>
+      </div>
+
+      <div class="venue-copy">
+        <p>قاعة</p>
+        <h1>قاعة لوريال</h1>
+        <h2>نادي الجلاء</h2>
+      </div>
+
+      <a class="venue-photo" href="https://maps.app.goo.gl/frENq9c5LUeo5SNm7?g_st=ic" target="_blank" rel="noopener" aria-label="فتح موقع القاعة على الخريطة">
+        <img src="assets/images/venue.jpg" alt="قاعة لوريال نادي الجلاء">
+      </a>
+
+      <a class="location-button" href="https://maps.app.goo.gl/frENq9c5LUeo5SNm7?g_st=ic" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-6.2 7-13a7 7 0 1 0-14 0c0 6.8 7 13 7 13Zm0-9.5A3.5 3.5 0 1 1 12 5a3.5 3.5 0 0 1 0 7.5Z"/></svg>
+        اللوكيشن
+      </a>
+    </section>
+
+    <section class="panel panel--rsvp" aria-label="التهنئة والتواصل">
+      <p class="rsvp-button">اترك تهنئتك</p>
+      <iframe
+        class="tally-form"
+        data-tally-src="https://tally.so/embed/445rKX?hideTitle=1&amp;alignLeft=1&amp;dynamicHeight=1"
+        title="نموذج تهنئة العروسين"
+        loading="eager"
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0"
+        scrolling="no"
+        allow="clipboard-write"
+      ></iframe>
+      <footer class="footer">
+        <p>DESIGNED BY OMER</p>
+        <nav aria-label="روابط التواصل الاجتماعي">
+          <a href="https://www.instagram.com/omararslaan/" target="_blank" rel="noopener" aria-label="Instagram">◎</a>
+          <a href="https://www.instagram.com/omararslaan/" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+          <a href="https://www.instagram.com/omararslaan/" target="_blank" rel="noopener" aria-label="Website">◉</a>
+          <a href="https://www.instagram.com/omararslaan/" target="_blank" rel="noopener" aria-label="Phone">●</a>
+        </nav>
+      </footer>
+    </section>
+  </main>
+
+  <button id="musicToggle" class="music-toggle" type="button" aria-label="إيقاف الموسيقى" hidden>♫</button>
+  <audio id="weddingSong" src="assets/audio/songwed.mp3" preload="auto" loop></audio>
+  <script>
+    var d = document, w = "https://tally.so/widgets/embed.js";
+    var loadTally = function () {
+      if (typeof Tally !== "undefined") {
+        Tally.loadEmbeds();
+      } else {
+        d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function (frame) {
+          frame.src = frame.dataset.tallySrc;
+        });
+      }
+    };
+    if (typeof Tally !== "undefined") {
+      loadTally();
+    } else if (d.querySelector('script[src="' + w + '"]') === null) {
+      var tallyScript = d.createElement("script");
+      tallyScript.src = w;
+      tallyScript.onload = loadTally;
+      tallyScript.onerror = loadTally;
+      d.body.appendChild(tallyScript);
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

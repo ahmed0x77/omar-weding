@@ -1,0 +1,64 @@
+@font-face { font-family: "Wedding Arabic"; src: url("assets/fonts/arabic-display.otf") format("opentype"); font-display: swap; }
+@font-face { font-family: "Wedding Text"; src: url("assets/fonts/arabic-text.otf") format("opentype"); font-display: swap; }
+@font-face { font-family: "Wedding Latin"; src: url("assets/fonts/latin-display.otf") format("opentype"); font-display: swap; }
+
+:root { color-scheme: dark; --gold: #e6ba7b; --gold-light: #f4d59c; --ink: #020b1a; }
+* { box-sizing: border-box; }
+html { background: #00040d; scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; background: #00040d; color: var(--gold); font-family: "Wedding Text", Tahoma, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body.locked { overflow: hidden; }
+button, a { -webkit-tap-highlight-color: transparent; }
+
+.invitation { width: 100%; margin: 0; overflow: hidden; background: var(--ink); opacity: 0; transition: opacity 900ms ease; }
+.invitation.is-visible { opacity: 1; }
+.panel { position: relative; width: 100%; aspect-ratio: 1698 / 2400; background: center / cover no-repeat; overflow: hidden; }
+.panel--hero { background-image: url("assets/images/hero.jpg"); }
+.panel--details { background-image: url("assets/images/details.jpg"); }
+.panel--rsvp { background-image: url("assets/images/rsvp.jpg"); }
+
+.invitation-cover { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; width: 100%; height: 100%; padding: 0; border: 0; background: radial-gradient(circle at 50% 42%, #09213d 0, #020a17 56%, #00040b 100%); cursor: pointer; transition: opacity 800ms ease, visibility 800ms ease; }
+.invitation-cover img { width: min(100vw, calc(100vh * .6667)); max-height: 100vh; object-fit: contain; animation: invite-pulse 3.6s ease-in-out infinite; filter: drop-shadow(0 22px 42px rgba(0, 0, 0, .72)); }
+.invitation-cover.is-opening { opacity: 0; visibility: hidden; pointer-events: none; }
+@keyframes invite-pulse { 0%, 100% { transform: scale(.965); } 50% { transform: scale(1.025); } }
+
+.hero-copy, .countdown-block, .venue-copy, .footer { position: absolute; left: 50%; width: 88%; transform: translateX(-50%); text-align: center; text-shadow: 0 2px 8px rgba(0, 0, 0, .78); }
+.hero-copy { top: 27.5%; }
+.event-title { margin: 0 0 8.5%; font-family: "Wedding Arabic", "Wedding Text", serif; font-size: clamp(35px, 9.5vw, 130px); line-height: 1; }
+.couple { display: flex; align-items: center; justify-content: center; gap: 7%; margin-bottom: 7%; font-family: "Wedding Arabic", "Wedding Text", serif; font-size: clamp(38px, 10.5vw, 144px); line-height: 1.2; }
+.couple b { font-family: Georgia, serif; font-size: .76em; font-weight: 400; }
+.date { margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: clamp(21px, 5.4vw, 74px); letter-spacing: .13em; }
+.time { margin: 2% 0 0; font-size: clamp(16px, 4.2vw, 57px); }
+
+.countdown-block { top: 9.2%; }
+.countdown-block > p { margin: 0 0 3%; font-family: "Wedding Arabic", "Wedding Text", serif; font-size: clamp(25px, 6.7vw, 92px); }
+.countdown { direction: ltr; display: flex; align-items: flex-start; justify-content: center; gap: 1.2%; }
+.countdown span { display: grid; min-width: 17%; }
+.countdown strong, .countdown i { font-family: Georgia, "Times New Roman", serif; font-size: clamp(24px, 7vw, 96px); font-style: normal; font-weight: 400; line-height: 1; }
+.countdown small { margin-top: 9%; font-size: clamp(9px, 2.3vw, 32px); }
+
+.venue-copy { top: 35.5%; }
+.venue-copy p, .venue-copy h1, .venue-copy h2 { margin: 0; font-weight: 400; }
+.venue-copy p { font-size: clamp(20px, 5.4vw, 74px); }
+.venue-copy h1 { margin-top: 1%; font-family: "Wedding Arabic", "Wedding Text", serif; font-size: clamp(26px, 6.7vw, 92px); }
+.venue-copy h2 { margin-top: 1%; font-size: clamp(20px, 5.4vw, 74px); }
+
+.venue-photo { position: absolute; top: 54.3%; left: 50%; display: block; width: 43%; aspect-ratio: .87; transform: translateX(-50%); overflow: hidden; border: 2px solid rgba(230, 186, 123, .66); border-radius: 50% 50% 4% 4% / 31% 31% 4% 4%; box-shadow: 0 8px 28px rgba(0, 0, 0, .52); }
+.venue-photo img { width: 100%; height: 100%; object-fit: cover; }
+
+.location-button, .rsvp-button { position: absolute; left: 50%; display: flex; align-items: center; justify-content: center; transform: translateX(-50%); color: #f4ede5; background: #c89469; text-decoration: none; border-radius: 8px; box-shadow: 0 6px 18px rgba(0, 0, 0, .25); }
+.location-button { transition: transform 180ms ease, filter 180ms ease; }
+.location-button:hover { transform: translateX(-50%) scale(1.035); filter: brightness(1.08); }
+.location-button { top: 83.7%; gap: 6%; min-width: 30%; padding: 1.8% 4%; font-size: clamp(14px, 3.7vw, 50px); }
+.location-button svg { width: 1em; fill: currentColor; }
+.rsvp-button { top: 4.3%; min-width: 28%; margin: 0; padding: 2.6% 5%; background: #a78043; font-size: clamp(17px, 4.2vw, 58px); }
+.tally-form { position: absolute; top: 17.7%; left: 50%; width: 59%; height: 68%; transform: translateX(-50%); border: 0; border-radius: 22px; background: transparent; color-scheme: dark; overflow: hidden; }
+
+.footer { bottom: 1.8%; }
+.footer p { display: inline-block; margin: 0 0 2.3%; padding: .5% 3%; border: 1px solid rgba(230, 186, 123, .72); border-radius: 4px; font-family: Georgia, "Times New Roman", serif; font-size: clamp(10px, 2.6vw, 36px); letter-spacing: .04em; }
+.footer nav { direction: ltr; display: flex; justify-content: center; gap: 7%; }
+.footer nav a { display: grid; place-items: center; width: clamp(24px, 6vw, 82px); aspect-ratio: 1; color: var(--gold); border: 1px solid rgba(230, 186, 123, .45); border-radius: 50%; text-decoration: none; font-family: Arial, sans-serif; font-size: clamp(12px, 3.2vw, 44px); }
+
+.music-toggle { position: fixed; z-index: 60; right: max(15px, env(safe-area-inset-right)); bottom: max(15px, env(safe-area-inset-bottom)); width: 45px; height: 45px; padding: 0; color: var(--gold-light); background: rgba(2, 11, 26, .82); border: 1px solid rgba(230, 186, 123, .72); border-radius: 50%; box-shadow: 0 4px 18px rgba(0, 0, 0, .5); font-size: 22px; cursor: pointer; backdrop-filter: blur(8px); }
+.music-toggle.is-muted { opacity: .58; }
+
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .invitation-cover img { animation: none; } }
