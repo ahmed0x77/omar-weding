@@ -12,8 +12,16 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .invitation { width: 100%; margin: 0; overflow: hidden; background: var(--ink); opacity: 0; transition: opacity 900ms ease; }
 .invitation.is-visible { opacity: 1; }
 .panel { position: relative; width: 100%; aspect-ratio: 1698 / 2400; background: center / cover no-repeat; overflow: hidden; }
-.panel--hero { background-image: url("assets/images/hero.jpg"); }
-.panel--details { background-image: url("assets/images/details.jpg"); }
+.panel--hero {
+  color: rgb(230, 186, 123);
+  background-image: url("assets/images/hero.jpg");
+  --darkreader-inline-color: var(--darkreader-text-e6ba7b, #e5b878);
+}
+.panel--details {
+  color: rgb(230, 186, 123);
+  background-image: url("assets/images/details.jpg");
+  --darkreader-inline-color: var(--darkreader-text-e6ba7b, #e5b878);
+}
 .panel--rsvp { background-image: url("assets/images/rsvp.jpg"); }
 
 .invitation-cover { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; width: 100%; height: 100%; padding: 0; border: 0; background: radial-gradient(circle at 50% 42%, #09213d 0, #020a17 56%, #00040b 100%); cursor: pointer; transition: opacity 800ms ease, visibility 800ms ease; }
@@ -22,34 +30,34 @@ button, a { -webkit-tap-highlight-color: transparent; }
 @keyframes invite-pulse { 0%, 100% { transform: scale(.965); } 50% { transform: scale(1.025); } }
 
 .hero-copy, .countdown-block, .venue-copy, .footer { position: absolute; left: 50%; width: 88%; transform: translateX(-50%); text-align: center; text-shadow: 0 2px 8px rgba(0, 0, 0, .78); }
-.hero-copy { top: 35%; }
-.event-title { display: flex; align-items: center; justify-content: center; margin: 0 0 8.5%; line-height: 1; }
-.event-title img { display: block; width: 54%; height: auto; }
-.couple { display: flex; align-items: center; justify-content: center; gap: 7%; margin-bottom: 7%; font-family: "Wedding Latin", "Wedding Arabic", serif; font-size: clamp(38px, 10.5vw, 144px); line-height: 1.2; }
-.couple b { font-family: Georgia, serif; font-size: .76em; font-weight: 400; }
-.date { direction: ltr; margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: clamp(21px, 5.4vw, 74px); letter-spacing: .13em; }
-.time { margin: 2% 0 0; font-size: clamp(16px, 4.2vw, 57px); }
+.hero-copy { top: 36.6%; width: 90%; }
+.event-title { display: flex; align-items: center; justify-content: center; margin: 0 0 8%; line-height: 1; }
+.event-title img { display: block; width: 44%; height: auto; }
+.couple { display: flex; align-items: center; justify-content: center; gap: 10%; margin-bottom: 6.5%; font-family: "Wedding Arabic", "Wedding Text", serif; font-size: clamp(36px, 10.5vw, 144px); line-height: 1.25; }
+.couple b { font-family: Georgia, serif; font-size: .82em; font-weight: 400; line-height: 1; }
+.date { direction: ltr; position: relative; z-index: 1; margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: clamp(18px, 4.6vw, 63px); letter-spacing: .18em; white-space: nowrap; }
+.time { position: relative; z-index: 1; display: table; margin: 2.4% auto 0; padding: 0 .4em; background: rgba(2, 11, 26, .42); border-radius: 999px; box-shadow: 0 0 12px 5px rgba(2, 11, 26, .42); font-size: clamp(15px, 3.7vw, 51px); text-shadow: 0 1px 3px #020b1a, 0 0 10px #020b1a; }
 
-.countdown-block { top: 9.2%; }
-.countdown-block > p { margin: 0 0 3%; font-family: "Wedding Arabic", "Wedding Text", serif; font-size: clamp(25px, 6.7vw, 92px); }
-.countdown { direction: ltr; display: flex; align-items: flex-start; justify-content: center; gap: 1.2%; }
-.countdown span { display: grid; min-width: 17%; }
-.countdown strong, .countdown i { font-family: Georgia, "Times New Roman", serif; font-size: clamp(24px, 7vw, 96px); font-style: normal; font-weight: 400; line-height: 1; }
-.countdown small { margin-top: 9%; font-size: clamp(9px, 2.3vw, 32px); }
+.countdown-block { top: 11.7%; }
+.countdown-block > p { margin: 0 0 4%; font-family: "Wedding Arabic", "Wedding Text", serif; font-size: clamp(28px, 7.8vw, 106px); line-height: 1.1; }
+.countdown { direction: ltr; display: flex; align-items: flex-start; justify-content: center; gap: .6%; }
+.countdown span { display: grid; min-width: 18%; }
+.countdown strong, .countdown i { font-family: Georgia, "Times New Roman", serif; font-size: clamp(27px, 7.6vw, 104px); font-style: normal; font-weight: 400; line-height: 1; }
+.countdown small { margin-top: 8%; font-size: clamp(7px, 1.6vw, 22px); }
 
-.venue-copy { top: 35.5%; }
+.venue-copy { top: 38.3%; }
 .venue-copy p, .venue-copy h1, .venue-copy h2 { margin: 0; font-weight: 400; }
-.venue-copy p { font-size: clamp(20px, 5.4vw, 74px); }
-.venue-copy h1 { margin-top: 1%; font-family: "Wedding Arabic", "Wedding Text", serif; font-size: clamp(26px, 6.7vw, 92px); }
-.venue-copy h2 { margin-top: 1%; font-size: clamp(20px, 5.4vw, 74px); }
+.venue-copy p { font-size: clamp(22px, 5.4vw, 74px); line-height: 1.1; }
+.venue-copy h1 { margin-top: 2.2%; font-family: "Wedding Arabic", "Wedding Text", serif; font-size: clamp(26px, 6.2vw, 85px); line-height: 1.15; }
+.venue-copy h2 { margin-top: 2.4%; font-size: clamp(20px, 5.1vw, 70px); line-height: 1.2; }
 
-.venue-photo { position: absolute; top: 54.3%; left: 50%; display: block; width: 43%; aspect-ratio: .87; transform: translateX(-50%); overflow: hidden; border: 2px solid rgba(230, 186, 123, .66); border-radius: 50% 50% 4% 4% / 31% 31% 4% 4%; box-shadow: 0 8px 28px rgba(0, 0, 0, .52); }
+.venue-photo { position: absolute; top: 59.2%; left: 50%; display: block; width: 39.5%; aspect-ratio: .87; transform: translateX(-50%); overflow: hidden; border: 2px solid rgba(230, 186, 123, .66); border-radius: 50% 50% 4% 4% / 31% 31% 4% 4%; box-shadow: 0 8px 28px rgba(0, 0, 0, .52); }
 .venue-photo img { width: 100%; height: 100%; object-fit: cover; }
 
 .location-button, .rsvp-button { position: absolute; left: 50%; display: flex; align-items: center; justify-content: center; transform: translateX(-50%); color: #f4ede5; background: #c89469; text-decoration: none; border-radius: 8px; box-shadow: 0 6px 18px rgba(0, 0, 0, .25); }
 .location-button { transition: transform 180ms ease, filter 180ms ease; }
 .location-button:hover { transform: translateX(-50%) scale(1.035); filter: brightness(1.08); }
-.location-button { top: 83.7%; gap: 6%; min-width: 30%; padding: 1.8% 4%; font-size: clamp(14px, 3.7vw, 50px); }
+.location-button { top: 92%; gap: 5%; min-width: 26%; padding: 1.6% 3.4%; border-radius: 4px; font-size: clamp(14px, 3.3vw, 45px); }
 .location-button svg { width: 1em; fill: currentColor; }
 .rsvp-button { top: 4.3%; min-width: 28%; margin: 0; padding: 2.6% 5%; background: #a78043; font-size: clamp(17px, 4.2vw, 58px); }
 .tally-shell { position: absolute; top: 16%; left: 50%; width: 74%; height: 68%; transform: translateX(-50%); border-radius: 22px; overflow: hidden; direction: ltr; }
