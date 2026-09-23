@@ -52,7 +52,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .location-button { top: 83.7%; gap: 6%; min-width: 30%; padding: 1.8% 4%; font-size: clamp(14px, 3.7vw, 50px); }
 .location-button svg { width: 1em; fill: currentColor; }
 .rsvp-button { top: 4.3%; min-width: 28%; margin: 0; padding: 2.6% 5%; background: #a78043; font-size: clamp(17px, 4.2vw, 58px); }
-.tally-form { position: absolute; top: 17.7%; left: 50%; width: 59%; height: 56%; transform: translateX(-50%); border: 0; border-radius: 22px; background: transparent; color-scheme: dark; overflow: auto; }
+.tally-shell { position: absolute; top: 17.7%; left: 50%; width: 59%; height: 56%; transform: translateX(-50%); border-radius: 22px; overflow: hidden; }
+.tally-form { display: block; width: 113.64%; height: 113.64%; border: 0; background: transparent; color-scheme: dark; transform: scale(.88); transform-origin: top left; }
 
 .footer { bottom: 1.8%; }
 .footer p { display: inline-block; margin: 0 0 2.3%; padding: .5% 3%; border: 1px solid rgba(230, 186, 123, .72); border-radius: 4px; font-family: Georgia, "Times New Roman", serif; font-size: clamp(10px, 2.6vw, 36px); letter-spacing: .04em; }
