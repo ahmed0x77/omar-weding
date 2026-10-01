@@ -76,3 +76,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .footer nav a { display: grid; place-items: center; width: clamp(24px, 6vw, 82px); aspect-ratio: 1; color: var(--gold); border: 1px solid rgba(230, 186, 123, .45); border-radius: 50%; text-decoration: none; font-family: Arial, sans-serif; font-size: clamp(12px, 3.2vw, 44px); }
 
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .invitation-cover img { animation: none; } }
+
+
+.time-num {
+  margin: 0 0.35em;
+  display: inline-block;
+}
