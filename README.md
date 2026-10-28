@@ -1,6 +1,6 @@
 # Wedding invitation
 
-Static wedding invitation for Omar and Reham. It has no build step and no remote Canva/JoyInvites dependency.
+Static wedding invitation for Hala and Abdel Fattah. It has no build step and no remote Canva/JoyInvites dependency.
 
 ## Preview
 

@@ -14,7 +14,7 @@ function openInvitation() {
 
 cover.addEventListener('click', openInvitation, { once: true });
 
-const weddingTime = new Date('2026-10-06T18:00:00+03:00').getTime();
+const weddingTime = new Date('2026-11-14T16:00:00+02:00').getTime();
 const countdownElements = {
   days: document.getElementById('days'), hours: document.getElementById('hours'),
   minutes: document.getElementById('minutes'), seconds: document.getElementById('seconds')
